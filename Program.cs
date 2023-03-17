@@ -23,7 +23,7 @@ for (int i = 0; i < Arrey.Length; i++)
 {
     Arrey[i] = new Random().Next();
     Console.WriteLine(Arrey[i]);
-    if(i % 2 != 0){sum++;Console.WriteLine(sum);}
+    if(i % 2 != 0){sum += Arrey[i];Console.WriteLine(sum);}
     
 }
 */
