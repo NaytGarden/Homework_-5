@@ -22,14 +22,14 @@ int sum = 0;
 for (int i = 0; i < Arrey.Length; i++)
 {
     Arrey[i] = new Random().Next();
-    Console.WriteLine(Arrey[i]);
     if(i % 2 != 0){sum += Arrey[i];Console.WriteLine(sum);}
     
 }
 */
 
 
-//Задача 38: Задайте массив натуральных чисел. Найдите разницу между максимальным и минимальным элементов массива.
+//Задача 38: Задайте массив натуральных чисел. 
+//Найдите разницу между максимальным и минимальным элементов массива.
 
 Console.WriteLine("Введите число от 1 до 10");
 int N = Convert.ToInt32(Console.ReadLine());
@@ -38,9 +38,9 @@ int temp;
 
 for (int i = 0; i < Arrey.Length; i++)
 {
-    Console.WriteLine("Введите натуральное число");
-    Arrey[i] = Convert.ToInt32(Console.ReadLine());
-    Console.WriteLine(Arrey[i]);
+    
+    Arrey[i] = new Random().Next(1,101);
+
     for (int j = 0; j < Arrey.Length - 1 - i;j++)
     {
         if(Arrey[j] > Arrey [j + 1])
@@ -48,7 +48,13 @@ for (int i = 0; i < Arrey.Length; i++)
             temp = Arrey[j];
             Arrey[j] = Arrey[j + 1];
             Arrey[j + 1] = temp;
-        }
-    Console.WriteLine(Arrey[Arrey.Length - 1] - Arrey[j]);    
+        } 
     }
 }
+
+for (int i = 0; i < Arrey.Length; i++)
+{
+    Console.WriteLine(Arrey[i]);
+    
+}
+Console.WriteLine(Arrey[Arrey.Length] - Arrey[0]);
